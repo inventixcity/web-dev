@@ -1,0 +1,304 @@
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg') no-repeat center center/cover;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.showcase-top img {
+    width: 170px;
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+    padding: 0 1rem;
+}
+
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    margin: 0 0 1rem;
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin: 0 0 1rem;
+    text-transform: none;
+}
+
+.showcase-content .ready-text {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.input-group input {
+    height: 60px; /* Match height */
+    width: 450px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+
+.input-group button {
+    height: 60px; /* Match height */
+    padding: 0 30px;
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-left: 1px solid #333;
+}
+
+.input-group button:hover {
+    background-color: #f40612;
+}
+
+/* Tabs */
+.style-cards {
+    background: #000;
+    border-top: 8px solid #222;
+}
+
+.card-0, .card-1, .card-2, .card-3 {
+    border-bottom: 8px solid #222;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card-0 .desc-0, .card-1 .desc-1, .card-2 .desc-2, .card-3 .desc-3 {
+    flex: 1;
+    text-align: left;
+    padding: 0 2rem;
+}
+
+.card-0 img, .card-1 img, .card-3 img {
+    flex: 1;
+    width: 50%;
+}
+
+.card-0 .desc-0 h1, .card-1 .desc-1 h1, .card-2 .desc-2 h1, .card-3 .desc-3 h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card-0 .desc-0 h3, .card-1 .desc-1 h3, .card-2 .desc-2 h3, .card-3 .desc-3 h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.card-0 {
+    position: relative;
+}
+
+.card-0 .video-tv {
+    position: absolute;
+    width: 370px;
+    height: 200px;
+    top: 48%; /* Adjusted to center over TV image */
+    right: 17%; /* Adjusted to valid position */
+    z-index: -1;
+    /* NOTE: In a real implementation, positioning this video perfectly inside the TV image requires precise % or pixel values based on the TV image size */
+}
+
+/* FAQ */
+.faq {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 8px solid #222;
+}
+
+.faq h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.accordion {
+    width: 75%;
+    margin: 2rem auto;
+}
+
+.accordion li {
+    background: #303030;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion li:hover {
+    background: #404040;
+}
+
+.faq .input-group {
+    margin: 2rem auto;
+}
+
+.faq .ready-text {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+    color: #757575;
+    padding: 50px 0;
+}
+
+.footer, .footer a {
+    color: #757575;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li {
+    line-height: 1.9;
+}
+
+.footer .lang-select {
+    margin-top: 2rem;
+    border: 1px solid #333;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background: #f40612;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
